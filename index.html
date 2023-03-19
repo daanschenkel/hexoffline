@@ -1,34 +1,69 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Updating Page</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 100vh;
-			background-color: #f2f2f2;
-		}
-		
-		h1 {
-			font-size: 36px;
-			text-align: center;
-			margin-top: 20px;
-		}
-		
-		img {
-			max-width: 80%;
-			max-height: 80%;
-		}
-	</style>
+    <title>Updating Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            text-align: center;
+              background-color: #1a1f3f;
+
+        }
+        
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-top: 20px;
+            font-family: 'Roboto', sans-serif;
+color: white;
+        }
+        h3 {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+        }
+        
+        img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+        p {
+        color: white;
+        }
+    </style>
 </head>
 <body>
-	<div>
-		<img src="https://cdn.discordapp.com/attachments/717111321904021574/1087078626698211389/Hex_Store.png" alt="Hex Store Logo">
-		<h1>Website currently undergoing maintenance.<br>Please check back later.</h1>
-	</div>
+    <div>
+        <img src="https://cdn.discordapp.com/attachments/717111321904021574/1087078626698211389/Hex_Store.png" alt="Hex Store Logo">
+        <h1>Website is currently being updated.</h1><h3><br>We should be back in about 2 minutes.<br>Happy predicting!</h3>
+        <p id="countdown">5</p>
+        <script>let count = 5; // Set the initial count to 5
+
+// Define a function to update the count and display it
+function updateCount() {
+  document.getElementById("countdown").innerHTML = count; // Display the count in a HTML element with id "countdown"
+  count--; // Decrement the count by 1
+  if (count < 0) { // If the count is less than 0, stop the countdown
+    clearInterval(countdownInterval);
+    location.reload();
+  }
+}
+
+// Call the updateCount function every second to update the countdown
+const countdownInterval = setInterval(updateCount, 1000);
+</script>
+        
+    </div>
 </body>
 </html>
